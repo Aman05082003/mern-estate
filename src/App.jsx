@@ -1,11 +1,22 @@
-
+import { BrowserRouter, Routes,Route } from "react-router-dom"
+import Home from "./pages/Home"
+import Signin from "./pages/Signin"
+import Signup from "./pages/Signup"
+import About from "./pages/About"
+import Profile from "./pages/Profile"
 
 const App = () => {
   return (
     <div>
-      <h1 className="text-red-500">
-      AMAN
-      </h1>
+      <BrowserRouter >
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/sign-in" element={<Signin/>}></Route>
+        <Route path="/sign-up" element={<Signup/>}></Route>
+        <Route path="/about" element={<About/>}></Route>
+        <Route path="/profie" element={<Profile/>}></Route>
+      </Routes>
+      </BrowserRouter>
     </div>
   )
 }
